@@ -2,6 +2,7 @@ import { Button, Card, Checkbox, Form, Input, Space, Typography } from "antd";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { SocialLogin } from "./components/SocialLogin";
+import handleAPI from "../../apis/handleAPI";
 
 const { Title, Paragraph, Text } = Typography;
 export const Login = () => {
@@ -9,8 +10,14 @@ export const Login = () => {
   const [isRemember, setIsRemember] = useState(false);
   const [form] = Form.useForm();
 
-  const handleLogin = (values: { email: string; password: string }) => {
+  const handleLogin = async (values: { email: string; password: string }) => {
     console.log(values);
+    try {
+      const res = await handleAPI("/auth/register", values, "post");
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <>

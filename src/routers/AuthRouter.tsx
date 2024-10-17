@@ -22,7 +22,7 @@ export const AuthRouter = () => {
             />
           </div>
           <div>
-            <Title>KANBAN</Title>
+            <Title className="text-primary">KANBAN</Title>
           </div>
         </div>
         <div className="col content-center">
