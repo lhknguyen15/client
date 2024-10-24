@@ -1,5 +1,6 @@
 import React from "react";
+import { HomeScreen } from "../screens/HomeScreen";
 
 export const MainRouter = () => {
-  return <div>MainRouter</div>;
+  return <HomeScreen />;
 };

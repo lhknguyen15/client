@@ -3,18 +3,27 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import SocialLogin from "./components/SocialLogin";
 import handleAPI from "../../apis/handleAPI";
+import { useDispatch } from "react-redux";
+import { addAuth } from "../../redux/reducers/authReducer";
 
 const { Title, Paragraph, Text } = Typography;
 export const SignUp = () => {
   const [isLoading, setIsLoading] = useState(false);
 
+  const dispatch = useDispatch();
+
   const [form] = Form.useForm();
+
   const handleLogin = async (values: { email: string; password: string }) => {
     const api = "/auth/register";
+
     setIsLoading(true);
     try {
-      const res = await handleAPI(api, values, "post");
-      console.log(res);
+      const res:any = await handleAPI(api, values, "post");
+      if(res.data){
+        message.success(res.message)
+        dispatch(addAuth(res.data))
+      }
     } catch (error: any) {
       console.log(error);
       message.error(error.message);
