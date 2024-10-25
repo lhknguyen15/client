@@ -10,7 +10,7 @@ import {
 } from "antd";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { SocialLogin } from "./components/SocialLogin";
+import SocialLogin from "./components/SocialLogin";
 import handleAPI from "../../apis/handleAPI";
 import { addAuth } from "../../redux/reducers/authReducer";
 import { useDispatch } from "react-redux";
