@@ -14,10 +14,7 @@ axiosClient.interceptors.request.use(async (config: any) => {
     ...config.headers,
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-  config.data;
-
-  return config;
+  return { ...config, data: config.data ?? null };
 });
 
 axiosClient.interceptors.response.use(

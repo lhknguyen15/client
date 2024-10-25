@@ -1,8 +1,8 @@
 import { ConfigProvider, message } from "antd";
 import "./App.css";
-import { Routers } from "./routers/Routers";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import Routers from "./routers/Routers";
 
 message.config({
   top: 30,
@@ -16,10 +16,11 @@ function App() {
     <ConfigProvider
       theme={{
         token: {},
+        components: {},
       }}
     >
       <Provider store={store}>
-        <Routers />;
+        <Routers />
       </Provider>
     </ConfigProvider>
   );
