@@ -53,7 +53,7 @@ const Login = () => {
           <img
             className="mb-3"
             src={
-              "https://firebasestorage.googleapis.com/v0/b/kanban-c0323.appspot.com/o/kanban-logo.png?alt=media&token=a3e8c386-57da-49a3-b9a2-94b8fd93ff83"
+              "https://firebasestorage.googleapis.com/v0/b/kanban-d3a9a.appspot.com/o/kanban-logo.png?alt=media&token=b92f8f9f-5148-48e4-bf7a-4d7525372890"
             }
             alt=""
             style={{
@@ -63,7 +63,7 @@ const Login = () => {
           />
           <Title level={2}>Log in to your account</Title>
           <Paragraph type="secondary">
-            Welcome back! please enter your details
+            Welcome back! Please enter your details.
           </Paragraph>
         </div>
 
@@ -109,7 +109,7 @@ const Login = () => {
               Remember for 30 days
             </Checkbox>
           </div>
-          <div className="col text-right">
+          <div className="col" style={{ textAlign: "right" }}>
             <Link to={"/"}>Forgot password?</Link>
           </div>
         </div>

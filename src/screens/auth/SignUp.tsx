@@ -40,8 +40,19 @@ const SignUp = () => {
         }}
       >
         <div className="text-center">
+          <img
+            className="mb-1"
+            src={
+              "https://firebasestorage.googleapis.com/v0/b/kanban-d3a9a.appspot.com/o/kanban-logo.png?alt=media&token=b92f8f9f-5148-48e4-bf7a-4d7525372890"
+            }
+            alt=""
+            style={{
+              width: 48,
+              height: 48,
+            }}
+          />
           <Title level={2}>Create an account</Title>
-          <Paragraph type="secondary">Free trial 30 days</Paragraph>
+          <Paragraph type="secondary">Start your 30-day free trial.</Paragraph>
         </div>
 
         <Form
@@ -92,7 +103,7 @@ const SignUp = () => {
                 validator: (_, value) => {
                   if (value.length < 6) {
                     return Promise.reject(
-                      new Error("Mật khẩu phải chứa ít nhất 6 ký tự")
+                      new Error("Password must be at least 6 characters")
                     );
                   } else {
                     return Promise.resolve();
