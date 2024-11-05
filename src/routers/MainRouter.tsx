@@ -11,7 +11,7 @@ import {
 } from "../screens";
 import { HomeScreen } from "../screens/HomeScreen";
 
-const { Content, Footer,} = Layout;
+const { Content, Footer } = Layout;
 
 export const MainRouter = () => {
   return (
@@ -20,7 +20,7 @@ export const MainRouter = () => {
         <SiderComponent />
         <Layout>
           <HeaderComponent />
-          <Content>
+          <Content className="mt-3 mb-2 container bg-white">
             <Routes>
               <Route path="/" element={<HomeScreen />} />
               <Route path="/inventory" element={<Inventories />} />
